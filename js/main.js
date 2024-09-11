@@ -221,34 +221,45 @@ $(window).on("load",function (){
 
   /* isotope
   -------------------------------------------------------*/
-var $gallery = $('.gallery').isotope({
-    // 设置默认筛选项为 .look 类
-    filter: '.look',
-    itemSelector: '.item-img',
-    transitionDuration: '0.5s',
-});
+  var $gallery = $('.gallery').isotope({});
+  $('.gallery').isotope({
 
-$(".gallery .single-image").fancybox({
-  'transitionIn'  : 'elastic',
-  'transitionOut' : 'elastic',
-  'speedIn'   : 600,
-  'speedOut'    : 200,
-  'overlayShow' : false
-});
+      // options
+      itemSelector: '.item-img',
+      transitionDuration: '0.5s',
 
-/* filter items on button click
--------------------------------------------------------*/
-$('.filtering').on( 'click', 'button', function() {
-    var filterValue = $(this).attr('data-filter');
-    $gallery.isotope({ filter: filterValue });
-});
+  });
 
-$('.filtering').on( 'click', 'button', function() {
-    $(this).addClass('active').siblings().removeClass('active');
-});
 
-/* setting the date on Footer
------------------------------------------------------*/
-var year = new Date();
-year = year.getFullYear();
-$('.cop').html("<h6 class=\"cop_rt\">© " + year + " Powered By ASV Creations</h6>");
+  $(".gallery .single-image").fancybox({
+    'transitionIn'  : 'elastic',
+    'transitionOut' : 'elastic',
+    'speedIn'   : 600,
+    'speedOut'    : 200,
+    'overlayShow' : false
+  });
+
+
+  /* filter items on button click
+  -------------------------------------------------------*/
+  $('.filtering').on( 'click', 'button', function() {
+
+      var filterValue = $(this).attr('data-filter');
+
+      $gallery.isotope({ filter: filterValue });
+
+      });
+
+  $('.filtering').on( 'click', 'button', function() {
+
+      $(this).addClass('active').siblings().removeClass('active');
+
+  });
+
+  /* setting the date on Footer
+  -----------------------------------------------------*/
+  var year = new Date();
+  year = year.getFullYear();
+  $('.cop').html("<h6 class=\"cop_rt\">© " + year + " Powered By ASV Creations</h6>");
+
+})
