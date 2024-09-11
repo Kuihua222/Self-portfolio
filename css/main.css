@@ -924,9 +924,9 @@ button.btn:hover:after, a.btn:hover:after {
   letter-spacing: 2px;
   color: #eaeaea;
   cursor: pointer;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: look .3s;
+  -o-transition: look .3s;
+  transition: look .3s;
 }
 
 .portfolio .filtering .active {
