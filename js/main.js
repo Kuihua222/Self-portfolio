@@ -225,6 +225,7 @@ $(window).on("load",function (){
   $('.gallery').isotope({
 
       // options
+      filter: '.look',
       itemSelector: '.item-img',
       transitionDuration: '0.5s',
 
