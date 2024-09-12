@@ -221,7 +221,8 @@ $(window).on("load",function (){
 
   /* isotope
   -------------------------------------------------------*/
-  var $gallery = $('.gallery').isotope({
+  var $gallery = $('.gallery').isotope({});
+  $('.gallery').isotope({
 
       // options
       filter: '.look',
