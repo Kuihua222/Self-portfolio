@@ -261,6 +261,6 @@ $(window).on("load",function (){
   -----------------------------------------------------*/
   var year = new Date();
   year = year.getFullYear();
-  $('.cop').html("<h6 class=\"cop_rt\">© " + year + " Powered By ASV Creations</h6>");
+  $('.cop').html("<h6 class=\"cop_rt\">© " + year + " Powered By Kui-H</h6>");
 
 })
